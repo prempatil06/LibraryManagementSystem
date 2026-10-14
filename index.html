@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-bar">
+        <p>Manage books easily and efficiently</p>
+    </header>
+
+    <div class="container">
+        <!-- Add Book Card -->
+        <div class="card">
+            <h3>Add New Book</h3>
+            <div class="form-row">
+                <input type="text" id="bookName" placeholder="Enter Book Name">
+                <input type="text" id="authorName" placeholder="Enter Author Name">
+                <input type="text" id="bookId" placeholder="Enter Book ID">
+                <button class="btn btn-green" onclick="addBook()">Add Book</button>
+            </div>
+        </div>
+
+        <!-- Search Box Card -->
+        <div class="card">
+            <h3>Search Books</h3>
+            <input type="text" id="searchInput" onkeyup="searchBooks()" placeholder="Search by book name...">
+        </div>
+
+        <!-- Available Books Card -->
+        <div class="card">
+            <h3>Available Books</h3>
+            <table id="bookTable">
+                <thead>
+                    <tr>
+                        <th>Book ID</th>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="bookList">
+                    <tr>
+                        <td>B001</td>
+                        <td>The Alchemist</td>
+                        <td>Paulo Coelho</td>
+                        <td><button class="btn btn-red" onclick="deleteRow(this)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="bottom-bar">
+        <p>Library Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
